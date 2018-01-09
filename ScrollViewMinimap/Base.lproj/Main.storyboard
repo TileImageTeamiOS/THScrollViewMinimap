@@ -54,9 +54,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="ldI-Kz-eGD" id="L9S-cb-4Sy"/>
-                        <outlet property="minimapHeight" destination="5CR-g6-gxW" id="czZ-on-HiD"/>
                         <outlet property="minimapView" destination="bz8-JG-15v" id="YlM-ap-FxT"/>
-                        <outlet property="minimapWidth" destination="EYg-Yo-j1b" id="J4M-mp-jfL"/>
                         <outlet property="scrollView" destination="YNR-Fx-Gc8" id="Xho-15-A9Z"/>
                     </connections>
                 </viewController>

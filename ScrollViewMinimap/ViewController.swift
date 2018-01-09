@@ -14,14 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var minimapView: MinimapView!
     
     var minimapDataSource: MinimapDataSource!
-    @IBOutlet weak var minimapHeight: NSLayoutConstraint!
-    @IBOutlet weak var minimapWidth: NSLayoutConstraint!
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        minimapDataSource = MinimapDataSource(scrollView: scrollView, image: imageView.image!, borderWidth: 2, borderColor: UIColor.yellow.cgColor, ratio: 70.0)
-        minimapView.set(dataSource: minimapDataSource, height: minimapHeight, width: minimapWidth)
-        
+
+        minimap()
+
         scrollView.contentInsetAdjustmentBehavior = .never
         imageView.frame.size = (imageView.image?.size)!
         scrollView.delegate = self
@@ -29,6 +28,16 @@ class ViewController: UIViewController {
         setZoomParametersForSize(scrollView.bounds.size)
         recenterImage()
     }
+
+    func minimap() {
+        minimapDataSource = MyMinimapDataSource(scrollView: scrollView, thumbnailImage: imageView.image!)
+        minimapDataSource.borderWidth = 2.0
+        minimapDataSource.borderColor = UIColor.yellow
+        minimapDataSource.downSizeRatio = 70.0
+
+        minimapView.set(dataSource: minimapDataSource)
+    }
+
     
     override func viewWillLayoutSubviews() {
         setZoomParametersForSize(scrollView.bounds.size)
@@ -55,19 +64,16 @@ class ViewController: UIViewController {
         scrollView.maximumZoomScale = 3.0
         scrollView.zoomScale = minScale
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
 }
 
 extension ViewController: UIScrollViewDelegate {
     public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
-    
+
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "scollViewAction"), object: nil, userInfo: nil)
+        minimapDataSource.resizeMinimapView(minimapView: minimapView)
     }
 }
+

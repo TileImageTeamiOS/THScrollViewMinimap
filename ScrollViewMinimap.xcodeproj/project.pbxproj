@@ -10,11 +10,11 @@
 		4E78A44F1FF7406B00F8CB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E78A44E1FF7406B00F8CB54 /* AppDelegate.swift */; };
 		4E78A4511FF7406B00F8CB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E78A4501FF7406B00F8CB54 /* ViewController.swift */; };
 		4E78A4541FF7406B00F8CB54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E78A4521FF7406B00F8CB54 /* Main.storyboard */; };
-		4E78A4571FF7406B00F8CB54 /* ScrollViewMinimap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E78A4551FF7406B00F8CB54 /* ScrollViewMinimap.xcdatamodeld */; };
 		4E78A4591FF7406B00F8CB54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E78A4581FF7406B00F8CB54 /* Assets.xcassets */; };
 		4E78A45C1FF7406B00F8CB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E78A45A1FF7406B00F8CB54 /* LaunchScreen.storyboard */; };
-		4E78A4641FF7568000F8CB54 /* MinimapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E78A4631FF7568000F8CB54 /* MinimapDataSource.swift */; };
 		4E78A4661FF7585500F8CB54 /* MinimapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E78A4651FF7585500F8CB54 /* MinimapView.swift */; };
+		7EF0774D2004BB3F0069E462 /* MyMinimapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0774C2004BB3F0069E462 /* MyMinimapDataSource.swift */; };
+		7EF0774F2004BB740069E462 /* MinimapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0774E2004BB740069E462 /* MinimapDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +22,12 @@
 		4E78A44E1FF7406B00F8CB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E78A4501FF7406B00F8CB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E78A4531FF7406B00F8CB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4E78A4561FF7406B00F8CB54 /* ScrollViewMinimap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScrollViewMinimap.xcdatamodel; sourceTree = "<group>"; };
 		4E78A4581FF7406B00F8CB54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E78A45B1FF7406B00F8CB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E78A45D1FF7406B00F8CB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E78A4631FF7568000F8CB54 /* MinimapDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimapDataSource.swift; sourceTree = "<group>"; };
 		4E78A4651FF7585500F8CB54 /* MinimapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimapView.swift; sourceTree = "<group>"; };
+		7EF0774C2004BB3F0069E462 /* MyMinimapDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMinimapDataSource.swift; sourceTree = "<group>"; };
+		7EF0774E2004BB740069E462 /* MinimapDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimapDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +66,9 @@
 				4E78A4581FF7406B00F8CB54 /* Assets.xcassets */,
 				4E78A45A1FF7406B00F8CB54 /* LaunchScreen.storyboard */,
 				4E78A45D1FF7406B00F8CB54 /* Info.plist */,
-				4E78A4551FF7406B00F8CB54 /* ScrollViewMinimap.xcdatamodeld */,
-				4E78A4631FF7568000F8CB54 /* MinimapDataSource.swift */,
 				4E78A4651FF7585500F8CB54 /* MinimapView.swift */,
+				7EF0774C2004BB3F0069E462 /* MyMinimapDataSource.swift */,
+				7EF0774E2004BB740069E462 /* MinimapDataSource.swift */,
 			);
 			path = ScrollViewMinimap;
 			sourceTree = "<group>";
@@ -145,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E78A4641FF7568000F8CB54 /* MinimapDataSource.swift in Sources */,
-				4E78A4571FF7406B00F8CB54 /* ScrollViewMinimap.xcdatamodeld in Sources */,
+				7EF0774D2004BB3F0069E462 /* MyMinimapDataSource.swift in Sources */,
+				7EF0774F2004BB740069E462 /* MinimapDataSource.swift in Sources */,
 				4E78A4511FF7406B00F8CB54 /* ViewController.swift in Sources */,
 				4E78A4661FF7585500F8CB54 /* MinimapView.swift in Sources */,
 				4E78A44F1FF7406B00F8CB54 /* AppDelegate.swift in Sources */,
@@ -334,19 +334,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4E78A4551FF7406B00F8CB54 /* ScrollViewMinimap.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4E78A4561FF7406B00F8CB54 /* ScrollViewMinimap.xcdatamodel */,
-			);
-			currentVersion = 4E78A4561FF7406B00F8CB54 /* ScrollViewMinimap.xcdatamodel */;
-			path = ScrollViewMinimap.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4E78A4431FF7406B00F8CB54 /* Project object */;
 }

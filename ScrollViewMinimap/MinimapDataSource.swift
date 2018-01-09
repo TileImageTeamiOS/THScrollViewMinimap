@@ -2,75 +2,81 @@
 //  MinimapDataSource.swift
 //  ScrollViewMinimap
 //
-//  Created by Seong ho Hong on 2017. 12. 30..
-//  Copyright © 2017년 Seong ho Hong. All rights reserved.
+//  Created by 홍창남 on 2018. 1. 9..
+//  Copyright © 2018년 Seong ho Hong. All rights reserved.
 //
 
 import UIKit
 
-public struct MinimapDataSource {
-    private var _scrollView: UIScrollView
-    private var _image: UIImage
-    private var _borderWidth: Int
-    private var _borderColor: CGColor
-    private var _ratio: Double
-    
-    init(scrollView: UIScrollView, image: UIImage, borderWidth: Int, borderColor: CGColor, ratio: Double) {
-        self._scrollView = scrollView
-        self._image = image
-        self._borderWidth = borderWidth
-        self._borderColor = borderColor
-        self._ratio = ratio
-    }
-    
-    public var scrollView: UIScrollView {
-        get {return self._scrollView}
-    }
-    
-    public var image: UIImage {
-        get {return self._image}
-    }
-    
-    public var borderWidth: Int {
-        get {return self._borderWidth}
-        set {self._borderWidth = newValue}
-    }
-    
-    public var borderColor: CGColor {
-        get {return self._borderColor}
-        set {self._borderColor = newValue}
-    }
-    
-    public var ratio: Double {
-        get {return self._ratio}
-        set {self._ratio = newValue}
-    }
-    
+
+public protocol MinimapDataSource {
+    var scrollView: UIScrollView { get }
+    var thumbnailImage: UIImage { get }
+    var borderWidth: CGFloat { get set }
+    var borderColor: UIColor { get set }
+    var downSizeRatio: CGFloat { get set }
+
+    func resizeMinimapView(minimapView: MinimapView)
+}
+
+
+extension MinimapDataSource {
     public var minimapImageHeight: CGFloat {
-        get {return CGFloat(Double(image.size.height)/ratio)}
+        return (thumbnailImage.size.height)/downSizeRatio
     }
-    
+
     public var minimapImageWidth: CGFloat {
-        get {return CGFloat(Double(image.size.width)/ratio)}
+        return (thumbnailImage.size.width)/downSizeRatio
     }
-    
-    public var scrollViewZoomScale: Double {
-        get {return Double(scrollView.zoomScale)}
+
+    var scrollViewVisibleSize: CGRect {
+
+        let zoomScale = scrollView.zoomScale
+
+        let scrollViewX = scrollView.contentOffset.x
+        let scrollViewY = scrollView.contentOffset.y
+        let scrollViewHeight = scrollView.bounds.size.height
+        let scrollViewWidth = scrollView.bounds.size.width
+
+        return CGRect(x: scrollViewX/zoomScale, y: scrollViewY/zoomScale,
+                      width: scrollViewWidth/zoomScale, height: scrollViewHeight/zoomScale)
     }
-    
-    public var scrollViewX: Double {
-        get {return Double(scrollView.contentOffset.x)}
-    }
-    
-    public var scrollViewY: Double {
-        get {return Double(scrollView.contentOffset.y)}
-    }
-    
-    public var scrollViewHeight: Double {
-        get {return Double(scrollView.bounds.size.height)}
-    }
-    
-    public var scrollViewWidth: Double {
-        get {return Double(scrollView.bounds.size.width)}
+
+    func currentRect(rect: CGRect) -> CGRect {
+        var x = rect.origin.x
+        var y = rect.origin.y
+        var width = rect.size.width
+        var height = rect.size.height
+
+        if x < 0.0 {
+            width += x
+            x = 0.0
+        }
+
+        if y < 0.0 {
+            height += y
+            y = 0.0
+        }
+
+        if self.minimapImageHeight < height {
+            height = self.minimapImageHeight
+        } else if y + height > self.minimapImageHeight {
+            height = self.minimapImageHeight - y
+        }
+
+        if self.minimapImageWidth < width {
+            width = self.minimapImageWidth
+        } else if x + width > self.minimapImageWidth {
+            width = self.minimapImageWidth - x
+        }
+        return CGRect(x: x, y: y, width: width, height: height)
     }
 }
+
+extension CGRect {
+    public func divideCGRectByDouble(ratio: CGFloat) -> CGRect {
+        return CGRect(x: self.origin.x/ratio, y: self.origin.y/ratio,
+                      width: self.width/ratio, height: self.height/ratio)
+    }
+}
+
