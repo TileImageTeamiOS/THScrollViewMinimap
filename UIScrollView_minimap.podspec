@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "create minimap by UIScrollView"
   s.description  =  "UIScrollView_minimap is a awesome module that shows the part of image in the scroll view as a form of minimap"
 
-  s.homepage     = "https://github.com/UIScrollView_minimap"
+  s.homepage     = "https://github.com/TileImageTeamiOS/UIScrollView_minimap"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Hong Seong Ho" => "grohong76@gmail.com",  'Changnam Hong' => 'hcn1519@gmail.com', 'Han JeeWoong'=>'hjw01234@gmail.com' }
 
