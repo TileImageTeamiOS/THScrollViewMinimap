@@ -41,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E3CFE9320074F360019993C /* Minimap */ = {
+			isa = PBXGroup;
+			children = (
+				4E78A4651FF7585500F8CB54 /* MinimapView.swift */,
+				7EF0774E2004BB740069E462 /* MinimapDataSource.swift */,
+			);
+			path = Minimap;
+			sourceTree = "<group>";
+		};
 		4E78A4421FF7406B00F8CB54 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +71,12 @@
 			children = (
 				4E78A44E1FF7406B00F8CB54 /* AppDelegate.swift */,
 				4E78A4501FF7406B00F8CB54 /* ViewController.swift */,
+				7EF0774C2004BB3F0069E462 /* MyMinimapDataSource.swift */,
 				4E78A4521FF7406B00F8CB54 /* Main.storyboard */,
 				4E78A4581FF7406B00F8CB54 /* Assets.xcassets */,
 				4E78A45A1FF7406B00F8CB54 /* LaunchScreen.storyboard */,
 				4E78A45D1FF7406B00F8CB54 /* Info.plist */,
-				4E78A4651FF7585500F8CB54 /* MinimapView.swift */,
-				7EF0774C2004BB3F0069E462 /* MyMinimapDataSource.swift */,
-				7EF0774E2004BB740069E462 /* MinimapDataSource.swift */,
+				4E3CFE9320074F360019993C /* Minimap */,
 			);
 			path = ScrollViewMinimap;
 			sourceTree = "<group>";
