@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "9.0"
   s.source           = { :git =>'https://github.com/TileImageTeamiOS/UIScrollView_minimap.git', :tag => s.version.to_s }
-  s.source_files  = 'Minimap'
+  s.source_files  = 'ScrollViewMinimap/Minimap/*.swift'
   s.frameworks = 'UIKit'
 
 end
