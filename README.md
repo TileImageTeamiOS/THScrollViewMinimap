@@ -34,6 +34,14 @@ minimapDataSource.downSizeRatio = 4.0
 
 // minimapView에 설정
 minimapView.set(dataSource: minimapDataSource)
+
+
+// 그 후에 UIScrollViewDelegate의 scrollViewDidScroll에 다음과 같은 코드를 추가해 줍니다.
+extension ViewController: UIScrollViewDelegate {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        minimapDataSource.resizeMinimapView(minimapView: minimapView)
+    }
+}
 ```
 
 
