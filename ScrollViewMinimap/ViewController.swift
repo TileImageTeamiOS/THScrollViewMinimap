@@ -30,10 +30,12 @@ class ViewController: UIViewController {
     }
 
     func minimap() {
-        minimapDataSource = MyMinimapDataSource(scrollView: scrollView, thumbnailImage: imageView.image!)
+        let thumbnailImageURL = Bundle.main.url(forResource: "smallBench", withExtension: "jpg")!
+        
+        minimapDataSource = MyMinimapDataSource(scrollView: scrollView, thumbnailImage: UIImage(contentsOfFile: thumbnailImageURL.path)!, originImageSize: CGSize(width: 5214, height: 7300))
         minimapDataSource.borderWidth = 2.0
         minimapDataSource.borderColor = UIColor.yellow
-        minimapDataSource.downSizeRatio = 70.0
+        minimapDataSource.downSizeRatio = 4.0
 
         minimapView.set(dataSource: minimapDataSource)
     }
