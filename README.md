@@ -1,4 +1,4 @@
-# UIScrollView_minimap
+# THScrollView-minimap
 
 [![Version](https://img.shields.io/badge/pod-0.1.1-blue.svg)](http://cocoapods.org/pods)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/younatics/YNDropDownMenu/blob/master/LICENSE)
@@ -7,12 +7,30 @@
 [![Swift 4.0](https://img.shields.io/badge/Swift-4.0-%23FB613C.svg)](https://developer.apple.com/swift/)
 
 
+## Feature
+- [x] 🗺 Map will shows based on your ScrollView.
+- [x] 🖍 Focused Box in MiniMap will follow user's sight and resizable.
+
 ## Demo
 
-![minimap_demo](images/minimap_demo.gif)
+![minimap_demo](images/THScrollView-Minimap_demo.gif)
+
+## Installation
+
+### CocoaPods
+
+To integrate `THScrollView-minimap` into your Xcode project using CocoaPods, specify it in your Podfile:
+
+```
+pod "THScrollView-minimap"
+```
+
+## Requirements
+
+`THScrollView-minimap` is written in Swift 4, and compatible with iOS 9.0+
 
 
-## Usage
+## How to use
 
 ```Swift
 // StoryBoard에 MinimapView 위치 설정
@@ -27,7 +45,7 @@ minimapDataSource = MyMinimapDataSource(scrollView: scrollView, thumbnailImage: 
 minimapDataSource = MyMinimapDataSource(scrollView: scrollView, thumbnailImage: UIImage(contentsOfFile: thumbnailImageURL.path)!, originImageSize: CGSize(width: 5214, height: 7300))
 
 // mimimap의  borderWidth 설정
-// Set the width of the minimap's border 
+// Set the width of the minimap's border
 minimapDataSource.borderWidth = 2.0
 
 // minimap의 color 설정
@@ -58,10 +76,7 @@ extension ViewController: UIScrollViewDelegate {
 MinimapView draws the Minimap by referring ScrollView and the ImageView. You can set the attributes for drawing the view by using MinimapDatasource
 
 
-## Installation
 
-You can use UIScrollVIew_minimap by setting cocoapods. Write the following codes on the PodFile.
+## License
 
-```
-pod "UIScrollView_minimap"
-```
+`THScrollView-minimap` is released under the MIT license. [See LICENSE](https://github.com/TileImageTeamiOS/THScrollView-minimap/blob/master/LICENSE) for details.
