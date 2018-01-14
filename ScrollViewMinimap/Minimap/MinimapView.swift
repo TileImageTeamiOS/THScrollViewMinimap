@@ -12,8 +12,8 @@ open class MinimapView: UIView {
 
     private var dataSource: MinimapDataSource?
 
-    var minimapImageView: UIImageView?
-    var focusedBoxView: UIView?
+    public var minimapImageView: UIImageView?
+    public var focusedBoxView: UIView?
 
     open func set(dataSource: MinimapDataSource) {
         self.dataSource = dataSource
