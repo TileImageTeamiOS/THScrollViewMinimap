@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var minimapView: MinimapView!
+    @IBOutlet weak var minimapView: THMinimapView!
     
-    var minimapDataSource: MinimapDataSource!
+    var minimapDataSource: THMinimapDataSource!
 
 
     override func viewDidLoad() {

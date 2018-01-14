@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyMinimapDataSource: MinimapDataSource {
+class MyMinimapDataSource: THMinimapDataSource {
 
     let scrollView: UIScrollView
     let thumbnailImage: UIImage
@@ -26,7 +26,7 @@ class MyMinimapDataSource: MinimapDataSource {
         self.downSizeRatio = 0.0
     }
 
-    func resizeMinimapView(minimapView: MinimapView) {
+    func resizeMinimapView(minimapView: THMinimapView) {
         let rect = self.scrollViewVisibleSize.divideCGRectByDouble(ratio: self.downSizeRatio)
         minimapView.focusedBoxView?.frame = currentRect(rect: rect)
     }

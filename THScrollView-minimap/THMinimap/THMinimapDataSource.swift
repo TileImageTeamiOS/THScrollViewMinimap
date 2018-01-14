@@ -9,7 +9,7 @@
 import UIKit
 
 
-public protocol MinimapDataSource {
+public protocol THMinimapDataSource {
     var scrollView: UIScrollView { get }
     var thumbnailImage: UIImage { get }
     var originImageSize: CGSize? { get }
@@ -17,11 +17,11 @@ public protocol MinimapDataSource {
     var borderColor: UIColor { get set }
     var downSizeRatio: CGFloat { get set }
 
-    func resizeMinimapView(minimapView: MinimapView)
+    func resizeMinimapView(minimapView: THMinimapView)
 }
 
 
-extension MinimapDataSource {
+extension THMinimapDataSource {
     public var minimapImageHeight: CGFloat {
         return (thumbnailImage.size.height)/downSizeRatio
     }

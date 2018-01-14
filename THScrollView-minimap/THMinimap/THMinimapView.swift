@@ -8,14 +8,14 @@
 
 import UIKit
 
-open class MinimapView: UIView {
+open class THMinimapView: UIView {
 
-    private var dataSource: MinimapDataSource?
+    private var dataSource: THMinimapDataSource?
 
     public var minimapImageView: UIImageView?
     public var focusedBoxView: UIView?
 
-    open func set(dataSource: MinimapDataSource) {
+    open func set(dataSource: THMinimapDataSource) {
         self.dataSource = dataSource
 
         minimapImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: dataSource.minimapImageWidth, height: dataSource.minimapImageHeight))
