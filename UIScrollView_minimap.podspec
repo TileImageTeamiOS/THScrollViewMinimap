@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "UIScrollView_minimap"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "create minimap by UIScrollView"
   s.description  =  "UIScrollView_minimap is a awesome module that shows the part of image in the scroll view as a form of minimap"
 
