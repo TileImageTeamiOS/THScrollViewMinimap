@@ -12,13 +12,15 @@ class MyMinimapDataSource: MinimapDataSource {
 
     let scrollView: UIScrollView
     let thumbnailImage: UIImage
+    let originImageSize: CGSize?
     var borderWidth: CGFloat
     var borderColor: UIColor
     var downSizeRatio: CGFloat
 
-    init(scrollView: UIScrollView, thumbnailImage: UIImage) {
+    init(scrollView: UIScrollView, thumbnailImage: UIImage, originImageSize: CGSize?) {
         self.scrollView = scrollView
         self.thumbnailImage = thumbnailImage
+        self.originImageSize = originImageSize
         self.borderWidth = 0.0
         self.borderColor = UIColor()
         self.downSizeRatio = 0.0

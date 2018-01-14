@@ -12,6 +12,7 @@ import UIKit
 public protocol MinimapDataSource {
     var scrollView: UIScrollView { get }
     var thumbnailImage: UIImage { get }
+    var originImageSize: CGSize? { get }
     var borderWidth: CGFloat { get set }
     var borderColor: UIColor { get set }
     var downSizeRatio: CGFloat { get set }
@@ -29,7 +30,7 @@ extension MinimapDataSource {
         return (thumbnailImage.size.width)/downSizeRatio
     }
 
-    var scrollViewVisibleSize: CGRect {
+    public var scrollViewVisibleSize: CGRect {
 
         let zoomScale = scrollView.zoomScale
 
@@ -38,11 +39,18 @@ extension MinimapDataSource {
         let scrollViewHeight = scrollView.bounds.size.height
         let scrollViewWidth = scrollView.bounds.size.width
 
-        return CGRect(x: scrollViewX/zoomScale, y: scrollViewY/zoomScale,
-                      width: scrollViewWidth/zoomScale, height: scrollViewHeight/zoomScale)
+        if let originSize = originImageSize {
+            let ratio = originSize.height/thumbnailImage.size.height
+            
+            return CGRect(x: (scrollViewX/ratio)/zoomScale, y: (scrollViewY/ratio)/zoomScale,
+                          width: (scrollViewWidth/ratio)/zoomScale, height: (scrollViewHeight/ratio)/zoomScale)
+        } else {
+            return CGRect(x: scrollViewX/zoomScale, y: scrollViewY/zoomScale,
+                          width: scrollViewWidth/zoomScale, height: scrollViewHeight/zoomScale)
+        }
     }
 
-    func currentRect(rect: CGRect) -> CGRect {
+    public func currentRect(rect: CGRect) -> CGRect {
         var x = rect.origin.x
         var y = rect.origin.y
         var width = rect.size.width
