@@ -68,15 +68,20 @@ extension THMinimapDataSource {
 
         if self.minimapImageHeight < height {
             height = self.minimapImageHeight
-        } else if y + height > self.minimapImageHeight {
+        }
+        
+        if y + height > self.minimapImageHeight {
             height = self.minimapImageHeight - y
         }
 
         if self.minimapImageWidth < width {
             width = self.minimapImageWidth
-        } else if x + width > self.minimapImageWidth {
+        }
+        
+        if x + width > self.minimapImageWidth {
             width = self.minimapImageWidth - x
         }
+        
         return CGRect(x: x, y: y, width: width, height: height)
     }
 }
