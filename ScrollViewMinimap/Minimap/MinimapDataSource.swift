@@ -30,7 +30,7 @@ extension MinimapDataSource {
         return (thumbnailImage.size.width)/downSizeRatio
     }
 
-    var scrollViewVisibleSize: CGRect {
+    public var scrollViewVisibleSize: CGRect {
 
         let zoomScale = scrollView.zoomScale
 
@@ -50,7 +50,7 @@ extension MinimapDataSource {
         }
     }
 
-    func currentRect(rect: CGRect) -> CGRect {
+    public func currentRect(rect: CGRect) -> CGRect {
         var x = rect.origin.x
         var y = rect.origin.y
         var width = rect.size.width
