@@ -25,10 +25,4 @@ class MyMinimapDataSource: THMinimapDataSource {
         self.borderColor = UIColor()
         self.downSizeRatio = 0.0
     }
-
-    func resizeMinimapView(minimapView: THMinimapView) {
-        let rect = self.scrollViewVisibleSize.divideCGRectByDouble(ratio: self.downSizeRatio)
-        minimapView.focusedBoxView?.frame = currentRect(rect: rect)
-    }
 }
-

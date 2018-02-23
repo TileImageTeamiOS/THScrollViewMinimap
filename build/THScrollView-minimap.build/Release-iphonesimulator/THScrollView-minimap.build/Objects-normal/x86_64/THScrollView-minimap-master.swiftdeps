@@ -1,0 +1,9 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "21725019e9b979e830a1ec054655134c"
+build_time: [1519371324, 692578000]
+inputs:
+  "/Users/seonghohong/Workspace/THScrollView-minimap/THScrollView-minimap/MyMinimapDataSource.swift": [9223372036, 854775807]
+  "/Users/seonghohong/Workspace/THScrollView-minimap/THScrollView-minimap/THMinimap/THMinimapDataSource.swift": [9223372036, 854775807]
+  "/Users/seonghohong/Workspace/THScrollView-minimap/THScrollView-minimap/ViewController.swift": [9223372036, 854775807]
+  "/Users/seonghohong/Workspace/THScrollView-minimap/THScrollView-minimap/THMinimap/THMinimapView.swift": [9223372036, 854775807]
+  "/Users/seonghohong/Workspace/THScrollView-minimap/THScrollView-minimap/AppDelegate.swift": [9223372036, 854775807]
