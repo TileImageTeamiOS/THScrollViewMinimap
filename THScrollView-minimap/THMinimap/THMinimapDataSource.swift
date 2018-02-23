@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 public protocol THMinimapDataSource {
     var scrollView: UIScrollView { get }
     var thumbnailImage: UIImage { get }
@@ -19,7 +18,6 @@ public protocol THMinimapDataSource {
 
     func resizeMinimapView(minimapView: THMinimapView)
 }
-
 
 extension THMinimapDataSource {
     public var minimapImageHeight: CGFloat {
@@ -41,7 +39,7 @@ extension THMinimapDataSource {
 
         if let originSize = originImageSize {
             let ratio = originSize.height/thumbnailImage.size.height
-            
+
             return CGRect(x: (scrollViewX/ratio)/zoomScale, y: (scrollViewY/ratio)/zoomScale,
                           width: (scrollViewWidth/ratio)/zoomScale, height: (scrollViewHeight/ratio)/zoomScale)
         } else {
@@ -69,7 +67,7 @@ extension THMinimapDataSource {
         if self.minimapImageHeight < height {
             height = self.minimapImageHeight
         }
-        
+
         if y + height > self.minimapImageHeight {
             height = self.minimapImageHeight - y
         }
@@ -77,12 +75,17 @@ extension THMinimapDataSource {
         if self.minimapImageWidth < width {
             width = self.minimapImageWidth
         }
-        
+
         if x + width > self.minimapImageWidth {
             width = self.minimapImageWidth - x
         }
-        
+
         return CGRect(x: x, y: y, width: width, height: height)
+    }
+
+    public func resizeMinimapView(minimapView: THMinimapView) {
+        let rect = self.scrollViewVisibleSize.divideCGRectByDouble(ratio: self.downSizeRatio)
+        minimapView.focusedBoxView?.frame = currentRect(rect: rect)
     }
 }
 
@@ -92,4 +95,3 @@ extension CGRect {
                       width: self.width/ratio, height: self.height/ratio)
     }
 }
-

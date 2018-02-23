@@ -18,11 +18,15 @@ open class THMinimapView: UIView {
     open func set(dataSource: THMinimapDataSource) {
         self.dataSource = dataSource
 
-        minimapImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: dataSource.minimapImageWidth, height: dataSource.minimapImageHeight))
+        minimapImageView = UIImageView(frame: CGRect(x: 0, y: 0,
+                                                     width: dataSource.minimapImageWidth,
+                                                     height: dataSource.minimapImageHeight))
         minimapImageView?.image = dataSource.thumbnailImage
         minimapImageView?.contentMode = .scaleAspectFit
 
-        focusedBoxView = UIView(frame: CGRect(x: 0, y: 0, width: dataSource.minimapImageWidth, height: dataSource.minimapImageHeight))
+        focusedBoxView = UIView(frame: CGRect(x: 0, y: 0,
+                                              width: dataSource.minimapImageWidth,
+                                              height: dataSource.minimapImageHeight))
         focusedBoxView?.layer.borderWidth = dataSource.borderWidth
         focusedBoxView?.layer.borderColor = dataSource.borderColor.cgColor
 
