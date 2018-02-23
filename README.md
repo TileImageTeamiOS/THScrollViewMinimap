@@ -2,6 +2,7 @@
 
 [![Version](https://img.shields.io/badge/pod-0.1.1-blue.svg)](http://cocoapods.org/pods)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/younatics/YNDropDownMenu/blob/master/LICENSE)
+[![Code Coverage](https://codecov.io/gh/TileImageTeamiOS/THScrollView-minimap/branch/master/graphs/badge.svg)](https://github.com/TileImageTeamiOS/THScrollView-mminimap)
 [![Build Status](https://travis-ci.org/TileImageTeamiOS/THScrollView-minimap.svg?branch=master)](https://travis-ci.org/TileImageTeamiOS/THScrollView-minimap)
 [![Platform](https://img.shields.io/cocoapods/p/YNDropDownMenu.svg?style=flat)](http://cocoapods.org/pods)
 [![Swift 4.0](https://img.shields.io/badge/Swift-4.0-%23FB613C.svg)](https://developer.apple.com/swift/)
