@@ -12,7 +12,7 @@ before_install:
   - brew update
 
 script:
-  - xcodebuild -project THScrollView-minimap.xcodeproj -target THScrollView-minimap -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild test -project THScrollView-minimap.xcodeproj -scheme THScrollView-minimap -configuration Debug -destination "OS=11.2,name=iPhone 8" -sdk iphonesimulator -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO test
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'THScrollView-minimap' -X xcodeplist
