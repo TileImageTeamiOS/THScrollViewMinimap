@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E78A44B1FF7406B00F8CB54 /* THScrollView-minimap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "THScrollView-minimap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E78A44B1FF7406B00F8CB54 /* THScrollViewMinimap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = THScrollViewMinimap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E78A44E1FF7406B00F8CB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E78A4501FF7406B00F8CB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E78A4531FF7406B00F8CB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		4E78A4421FF7406B00F8CB54 = {
 			isa = PBXGroup;
 			children = (
-				4E78A44D1FF7406B00F8CB54 /* THScrollView-minimap */,
+				4E78A44D1FF7406B00F8CB54 /* THScrollViewMinimap */,
 				4E78A44C1FF7406B00F8CB54 /* Products */,
 				4E85FD62203FEEBF0051C192 /* THScrollViewMinimapTests */,
 			);
@@ -87,13 +87,13 @@
 		4E78A44C1FF7406B00F8CB54 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E78A44B1FF7406B00F8CB54 /* THScrollView-minimap.app */,
+				4E78A44B1FF7406B00F8CB54 /* THScrollViewMinimap.app */,
 				4E85FD61203FEEBF0051C192 /* THScrollViewMinimapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E78A44D1FF7406B00F8CB54 /* THScrollView-minimap */ = {
+		4E78A44D1FF7406B00F8CB54 /* THScrollViewMinimap */ = {
 			isa = PBXGroup;
 			children = (
 				4EBE66B1200B183C0091FA38 /* bench.jpg */,
@@ -107,7 +107,7 @@
 				4E78A45D1FF7406B00F8CB54 /* Info.plist */,
 				4E3CFE9320074F360019993C /* THMinimap */,
 			);
-			path = "THScrollView-minimap";
+			path = THScrollViewMinimap;
 			sourceTree = "<group>";
 		};
 		4E85FD62203FEEBF0051C192 /* THScrollViewMinimapTests */ = {
@@ -122,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E78A44A1FF7406B00F8CB54 /* THScrollView-minimap */ = {
+		4E78A44A1FF7406B00F8CB54 /* THScrollViewMinimap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E78A4601FF7406B00F8CB54 /* Build configuration list for PBXNativeTarget "THScrollView-minimap" */;
+			buildConfigurationList = 4E78A4601FF7406B00F8CB54 /* Build configuration list for PBXNativeTarget "THScrollViewMinimap" */;
 			buildPhases = (
 				4E78A4471FF7406B00F8CB54 /* Sources */,
 				4E78A4481FF7406B00F8CB54 /* Frameworks */,
@@ -135,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = "THScrollView-minimap";
+			name = THScrollViewMinimap;
 			productName = ScrollViewMinimap;
-			productReference = 4E78A44B1FF7406B00F8CB54 /* THScrollView-minimap.app */;
+			productReference = 4E78A44B1FF7406B00F8CB54 /* THScrollViewMinimap.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4E85FD60203FEEBF0051C192 /* THScrollViewMinimapTests */ = {
@@ -179,7 +179,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E78A4461FF7406B00F8CB54 /* Build configuration list for PBXProject "THScrollView-minimap" */;
+			buildConfigurationList = 4E78A4461FF7406B00F8CB54 /* Build configuration list for PBXProject "THScrollViewMinimap" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -192,7 +192,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E78A44A1FF7406B00F8CB54 /* THScrollView-minimap */,
+				4E78A44A1FF7406B00F8CB54 /* THScrollViewMinimap */,
 				4E85FD60203FEEBF0051C192 /* THScrollViewMinimapTests */,
 			);
 		};
@@ -262,7 +262,7 @@
 /* Begin PBXTargetDependency section */
 		4E85FD67203FEEBF0051C192 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E78A44A1FF7406B00F8CB54 /* THScrollView-minimap */;
+			target = 4E78A44A1FF7406B00F8CB54 /* THScrollViewMinimap */;
 			targetProxy = 4E85FD66203FEEBF0051C192 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -401,9 +401,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
-				INFOPLIST_FILE = "THScrollView-minimap/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/THScrollViewMinimap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.grohong.THScrollView-minimap";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.grohong.THScrollViewMinimap;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -416,9 +417,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TX5PVNK4;
-				INFOPLIST_FILE = "THScrollView-minimap/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/THScrollViewMinimap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.grohong.THScrollView-minimap";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.grohong.THScrollViewMinimap;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -437,7 +439,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/THScrollView-minimap.app/THScrollView-minimap";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/THScrollViewMinimap.app/THScrollViewMinimap";
 			};
 			name = Debug;
 		};
@@ -453,14 +455,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/THScrollView-minimap.app/THScrollView-minimap";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/THScrollViewMinimap.app/THScrollViewMinimap";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E78A4461FF7406B00F8CB54 /* Build configuration list for PBXProject "THScrollView-minimap" */ = {
+		4E78A4461FF7406B00F8CB54 /* Build configuration list for PBXProject "THScrollViewMinimap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E78A45E1FF7406B00F8CB54 /* Debug */,
@@ -469,7 +471,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E78A4601FF7406B00F8CB54 /* Build configuration list for PBXNativeTarget "THScrollView-minimap" */ = {
+		4E78A4601FF7406B00F8CB54 /* Build configuration list for PBXNativeTarget "THScrollViewMinimap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E78A4611FF7406B00F8CB54 /* Debug */,
