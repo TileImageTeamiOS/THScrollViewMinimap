@@ -1,4 +1,4 @@
-# THScrollView-minimap
+# THScrollViewMinimap
 
 [![Version](https://img.shields.io/cocoapods/v/THScrollView-minimap.svg?style=flat)](http://cocoapods.org/pods)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/younatics/YNDropDownMenu/blob/master/LICENSE)

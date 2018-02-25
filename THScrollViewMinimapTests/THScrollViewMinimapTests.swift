@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import THScrollView_minimap
+@testable import THScrollViewMinimap
 
 class THScrollViewMinimapTests: XCTestCase {
 
