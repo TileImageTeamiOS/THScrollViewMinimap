@@ -3,12 +3,12 @@
 ### Code of Conduct
 
 
-Please read our [Code of Conduct](https://github.com/TileImageTeamiOS/THScrollView-minimap/blob/master/Code_of_Conduct.md).
-The THScrollView-minimap maintainers take this Code of Conduct very seriously. Intolerance, disrespect, harassment, and any form of negativity will not be tolerated.
+Please read our [Code of Conduct](https://github.com/TileImageTeamiOS/THScrollViewMinimap/blob/master/Code_of_Conduct.md).
+The THScrollViewMinimap maintainers take this Code of Conduct very seriously. Intolerance, disrespect, harassment, and any form of negativity will not be tolerated.
 
 ### Ways to Contribute
 
-You can contribute to THScrollView-minimap in a variety of ways:
+You can contribute to THScrollViewMinimap in a variety of ways:
 
 - Fixing or reporting bugs :scream:
 - Improving documentation :heart:
@@ -21,13 +21,13 @@ You can contribute to THScrollView-minimap in a variety of ways:
 
 ### Opening a New Issue
 
-- Please check the [README](https://github.com/TileImageTeamiOS/THScrollView-minimap/blob/master/README.md) to see if your question is answered there.
-- Search [open issues](https://github.com/TileImageTeamiOS/THScrollView-minimap/issues?q=is%3Aopen+is%3Aissue) and [closed issues](https://github.com/TileImageTeamiOS/THScrollView-minimap/issues?q=is%3Aissue+is%3Aclosed) to avoid opening a duplicate issue.
+- Please check the [README](https://github.com/TileImageTeamiOS/THScrollViewMinimap/blob/master/README.md) to see if your question is answered there.
+- Search [open issues](https://github.com/TileImageTeamiOS/THScrollViewMinimap/issues?q=is%3Aopen+is%3Aissue) and [closed issues](https://github.com/TileImageTeamiOS/THScrollViewMinimap/issues?q=is%3Aissue+is%3Aclosed) to avoid opening a duplicate issue.
 - Avoiding duplicate issues organizes all relevant information for project maintainers and other users.
 - If no issues represent your problem, please open a new issue with a good title and useful description.
 
 - Information to Provide When Opening an Issue:
-    - THScrollView-minimap version(s)
+    - THScrollViewMinimap version(s)
     - iOS version(s)
     - Devices/Simulators affected
     - Full crash log, if applicable
@@ -53,14 +53,14 @@ The more information you can provide, the easier it will be for us to resolve yo
 2. Write unit tests for new functionality or fix any broken by your changes.
 3. If your changes affect documentation, please update them accordingly.
 4. Avoid pull requests with a large number of commits.
-5. Write clean code and follow the THScrollView-minimap [style guidelines](#style-guidelines).
+5. Write clean code and follow the THScrollViewMinimap [style guidelines](#style-guidelines).
 
 **You should submit one pull request per feature, the smaller the pull request the better chances it will be merged.**
 Enormous pull requests take a significant time to review and understand their implications on the existing codebase.
 
 ### Style Guidelines
 
-Writing clean code and upholding project standards is as important as adding new features. To ensure this, THScrollView-minimap employs a few practices:
+Writing clean code and upholding project standards is as important as adding new features. To ensure this, THScrollViewMinimap employs a few practices:
 
 1. We use [SwiftLint](https://github.com/realm/SwiftLint) to enforce style and conventions at compile time.
 2. We adhere to the [Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/).
