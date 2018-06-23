@@ -13,48 +13,25 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="THScrollView_minimap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="THScrollViewMinimap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNR-Fx-Gc8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bench" translatesAutoresizingMaskIntoConstraints="NO" id="ldI-Kz-eGD">
-                                        <rect key="frame" x="0.0" y="0.0" width="5214" height="7300"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ldI-Kz-eGD" secondAttribute="bottom" id="Dle-rr-2st"/>
-                                    <constraint firstItem="ldI-Kz-eGD" firstAttribute="leading" secondItem="YNR-Fx-Gc8" secondAttribute="leading" id="Kwe-ru-KAw"/>
-                                    <constraint firstAttribute="trailing" secondItem="ldI-Kz-eGD" secondAttribute="trailing" id="Qei-1e-hWx"/>
-                                    <constraint firstItem="ldI-Kz-eGD" firstAttribute="top" secondItem="YNR-Fx-Gc8" secondAttribute="top" id="mRZ-Zo-T7i"/>
-                                </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bz8-JG-15v" customClass="THMinimapView" customModule="THScrollView_minimap" customModuleProvider="target">
-                                <rect key="frame" x="254" y="546" width="100" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="5CR-g6-gxW"/>
-                                    <constraint firstAttribute="width" constant="100" id="EYg-Yo-j1b"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YNR-Fx-Gc8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3pw-57-cqm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bz8-JG-15v" secondAttribute="bottom" constant="21" id="46O-jk-Eiw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bz8-JG-15v" secondAttribute="trailing" constant="21" id="8Sf-7U-Xuh"/>
-                            <constraint firstAttribute="trailing" secondItem="YNR-Fx-Gc8" secondAttribute="trailing" id="FR3-Hs-JEb"/>
-                            <constraint firstItem="YNR-Fx-Gc8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V0Q-Tf-hdt"/>
-                            <constraint firstItem="YNR-Fx-Gc8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="beK-wt-93e"/>
+                            <constraint firstItem="YNR-Fx-Gc8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="INF-gY-zml"/>
+                            <constraint firstItem="YNR-Fx-Gc8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W9N-ls-Esr"/>
+                            <constraint firstItem="YNR-Fx-Gc8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="aFV-Le-lYr"/>
+                            <constraint firstItem="YNR-Fx-Gc8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="o3i-B6-ais"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="ldI-Kz-eGD" id="L9S-cb-4Sy"/>
-                        <outlet property="minimapView" destination="bz8-JG-15v" id="YlM-ap-FxT"/>
                         <outlet property="scrollView" destination="YNR-Fx-Gc8" id="Xho-15-A9Z"/>
                     </connections>
                 </viewController>
@@ -63,7 +40,4 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bench" width="5214" height="7300"/>
-    </resources>
 </document>
