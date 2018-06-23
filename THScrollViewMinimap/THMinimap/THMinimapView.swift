@@ -74,10 +74,24 @@ open class THMinimapView: UIView {
         let zoomScale = scrollView.zoomScale
         let widthRatio = box.size.width / scrollBox.size.width
         let heightRatio = box.size.height / scrollBox.size.height
-        let newX = (scrollView.contentOffset.x * widthRatio) + (box.origin.x / 2)
-        let newY = (scrollView.contentOffset.y * heightRatio) + (box.origin.y / 2)
-        let newWidth = box.size.width / zoomScale
-        let newHeight = box.size.height / zoomScale
+        var newX = (scrollView.contentOffset.x * widthRatio)
+        var newY = (scrollView.contentOffset.y * heightRatio)
+        var newWidth = minimapImageView.frame.size.width / zoomScale
+        var newHeight = minimapImageView.frame.size.height / zoomScale
+        if box.origin.x > newX {
+            newWidth -= (box.origin.x - newX)
+            newX = box.origin.x
+        }
+        if box.origin.y > newY {
+            newHeight -= (box.origin.y - newY)
+            newY = box.origin.y
+        }
+        if (newX + newWidth) > (box.origin.x + box.size.width) {
+            newWidth = box.size.width - newX + box.origin.x
+        }
+        if (newY + newHeight) > (box.origin.y + box.size.height) {
+            newHeight = box.size.height - newY + box.origin.y
+        }
         focusedBoxView.frame = CGRect(x: newX, y: newY, width: newWidth, height: newHeight)
     }
 }
