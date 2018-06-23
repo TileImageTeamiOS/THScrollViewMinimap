@@ -16,8 +16,6 @@
 		4E85FD64203FEEBF0051C192 /* THScrollViewMinimapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85FD63203FEEBF0051C192 /* THScrollViewMinimapTests.swift */; };
 		4EBE66B0200B18060091FA38 /* smallBench.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EBE66AF200B18060091FA38 /* smallBench.jpg */; };
 		4EBE66B2200B183C0091FA38 /* bench.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EBE66B1200B183C0091FA38 /* bench.jpg */; };
-		7EF0774D2004BB3F0069E462 /* MyMinimapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0774C2004BB3F0069E462 /* MyMinimapDataSource.swift */; };
-		7EF0774F2004BB740069E462 /* THMinimapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0774E2004BB740069E462 /* THMinimapDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +42,6 @@
 		4E85FD65203FEEBF0051C192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EBE66AF200B18060091FA38 /* smallBench.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smallBench.jpg; sourceTree = "<group>"; };
 		4EBE66B1200B183C0091FA38 /* bench.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bench.jpg; sourceTree = "<group>"; };
-		7EF0774C2004BB3F0069E462 /* MyMinimapDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMinimapDataSource.swift; sourceTree = "<group>"; };
-		7EF0774E2004BB740069E462 /* THMinimapDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMinimapDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				4E78A4651FF7585500F8CB54 /* THMinimapView.swift */,
-				7EF0774E2004BB740069E462 /* THMinimapDataSource.swift */,
 			);
 			path = THMinimap;
 			sourceTree = "<group>";
@@ -100,7 +95,6 @@
 				4EBE66AF200B18060091FA38 /* smallBench.jpg */,
 				4E78A44E1FF7406B00F8CB54 /* AppDelegate.swift */,
 				4E78A4501FF7406B00F8CB54 /* ViewController.swift */,
-				7EF0774C2004BB3F0069E462 /* MyMinimapDataSource.swift */,
 				4E78A4521FF7406B00F8CB54 /* Main.storyboard */,
 				4E78A4581FF7406B00F8CB54 /* Assets.xcassets */,
 				4E78A45A1FF7406B00F8CB54 /* LaunchScreen.storyboard */,
@@ -241,8 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF0774D2004BB3F0069E462 /* MyMinimapDataSource.swift in Sources */,
-				7EF0774F2004BB740069E462 /* THMinimapDataSource.swift in Sources */,
 				4E78A4511FF7406B00F8CB54 /* ViewController.swift in Sources */,
 				4E78A4661FF7585500F8CB54 /* THMinimapView.swift in Sources */,
 				4E78A44F1FF7406B00F8CB54 /* AppDelegate.swift in Sources */,
